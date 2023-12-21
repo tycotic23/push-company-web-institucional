@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    /* outline: solid red 2px; */
+}
+
+nav{
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    /*sombra abajo*/
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap:0.5rem;
+    color:black;
+    font-size: 1.4rem;
+}
+
+header{
+    width: 100%;
+    background-image: url("assets/5.jpg");
+    background-size: 100% auto;
+    min-height: 60vh;
+    background-position-y: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    
+}
+
+
+h1{
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    max-width: 70%;
+}
+
+#estadisticas{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
+#estadisticas p{
+    font-size: 3rem;
+    border: 2px white solid;
+    border-radius: 1500px;
+    padding: 3rem;
+}
+
+footer{
+    width: 100%;
+    background-image: url("assets/6.jpg");
+    /*algun filtro azul sobre el fondo*/
+    background-size: 100% auto;
+    min-height: 60vh;
+    background-position-y: center;
+}
+
+
+/* para secciones con fondo blanco, titulo y parrafo todo centrado con aire */
+.parrafo-centrado{
+    width: 100%;
+    padding: 3rem;
+
+}
+
+.parrafo-centrado h2{
+    text-align: center;
+}
+
+.parrafo-centrado p{
+    text-align: center;
+}
