@@ -7,7 +7,7 @@
 
 nav{
     width: 100%;
-    background-color: gray;
+    background-color: lightgray;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -29,6 +29,8 @@ header{
     background-size: 100% auto;
     min-height: 60vh;
     background-position-y: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     display: flex;
     align-items: center;
@@ -67,6 +69,7 @@ footer{
     background-size: 100% auto;
     min-height: 60vh;
     background-position-y: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -89,6 +92,21 @@ footer{
     width: 100%;
 }
 
+
+.banner{
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    min-height: 60vh;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#banner-obras{
+    background-image: url(assets/8.jpg);
+    
+}
 .servicio-item{
     width: 100%;
     display: flex;
@@ -97,6 +115,7 @@ footer{
     background-position: center center;
     background-image: url(assets/1.jpg);
     height: 50vh;
+    /* background-attachment: fixed; */
 }
 
 .servicio-item:nth-child(even){
@@ -116,5 +135,68 @@ footer{
     background-color: white;
     width: 100%;
     padding: 2rem 2rem;
+}
+
+#obras{
+    width: 100%;
+    background-color: lightgray;
+    padding-bottom: 2rem;
+}
+
+#obras h2{
+    padding:3rem;
+    font-size: 3rem;
+}
+
+.proyecto{
+    margin:3rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.proyecto p{
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+}
+
+.proyecto>div{
+    display:flex;
+    justify-content: space-between;
+}
+
+.proyecto>div>img{
+    width: 100%;
+    max-height: 40vh;
+    object-fit: cover;
+}
+
+.proyecto-info{
+    width: 100%;
+    padding: 3rem;
+}
+
+.proyecto-info ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    padding-top: 2rem;
+}
+
+.proyecto-info li{
+    gap: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.proyecto-info li img{
+    width: 20px;
+}
+
+
+.proyecto-info h3{
+    font-size: 2rem;
 }
 
