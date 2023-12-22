@@ -62,15 +62,7 @@ h1{
     padding: 3rem;
 }
 
-footer{
-    width: 100%;
-    background-image: url("assets/6.jpg");
-    /*algun filtro azul sobre el fondo*/
-    background-size: 100% auto;
-    min-height: 60vh;
-    background-position-y: center;
-    background-repeat: no-repeat;
-}
+
 
 
 /* para secciones con fondo blanco, titulo y parrafo todo centrado con aire */
@@ -104,7 +96,12 @@ footer{
 }
 
 #banner-obras{
-    background-image: url(assets/8.jpg);
+    background-image: linear-gradient(rgba(0, 92, 121, 0.534),rgba(0, 92, 121, 0.534)), url(assets/8.jpg);
+    
+}
+
+#banner-fin{
+    background-image:linear-gradient(rgba(0, 92, 121, 0.534),rgba(0, 92, 121, 0.534)), url(assets/9.jpg);
     
 }
 .servicio-item{
@@ -200,3 +197,57 @@ footer{
     font-size: 2rem;
 }
 
+#contacto{
+    background-image: url(assets/mapa.png);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center center;
+    height: 70vh;
+    /* background-attachment: fixed; */
+}
+
+#contacto>div{
+    background-color: rgb(34, 147, 253);
+    width: 50%;
+    padding: 2rem 2rem;
+}
+
+footer{
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 92, 121, 0.534),rgba(0, 92, 121, 0.534)), url("assets/6.jpg");
+    /*algun filtro azul sobre el fondo*/
+    background-size: 100% auto;
+    min-height: 60vh;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    justify-content: flex-end;
+    color: white;
+}
+
+#desarrollado{
+    display: flex;
+    justify-content: space-between;
+}
+
+#info-empresa{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+
+#info-empresa img{
+    width: 200px;
+}
+
+footer>img{
+    width: 100%;
+}
