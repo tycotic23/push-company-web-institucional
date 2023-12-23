@@ -1,3 +1,9 @@
+
+ /*  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;800;1000&display=swap'); */
+ /* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;800;1000&display=swap'); */
+/*  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+
 *{
     box-sizing: border-box;
     margin:0;
@@ -5,29 +11,83 @@
     /* outline: solid red 2px; */
 }
 
+html{
+    /* font-family: 'Cairo', sans-serif; */
+    /* font-family: 'Nunito', sans-serif; */
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5;
+    background-color: rgb(240, 240, 240);
+}
+
+
 nav{
     width: 100%;
-    background-color: lightgray;
+    /* background-color: rgba(5, 148, 243, 0.486); */
     display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+    flex-direction: column;
+    position: fixed;
+    top:0;
     align-items: center;
     /*sombra abajo*/
+   
+}
+
+nav>div{
+    width: 100%;
+    
+    /* background-color: rgba(0, 92, 121, 0.534); */
+
+    /* poner este color cuando no esta arriba de todo, sino transparente */
+    /* background-color: rgba(0, 135, 177,0.6); */
+    display: flex;
+    justify-content: space-between;
+    padding:  0 1rem;
+    align-items: center;
+    /*sombra abajo*/
+    /* box-shadow: 10px 7px 49px -17px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 7px 49px -17px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 7px 49px -17px rgba(0,0,0,0.75); */
+}
+
+/* nav hr{
+    border: none;
+    height: 1px;
+    background-color: white;
+    width: 100%;
+    
+} */
+
+hr{
+    margin: 0 1rem;
 }
 
 .menu{
     display: flex;
     list-style: none;
-    gap:0.5rem;
+    gap:1rem;
     color:black;
     font-size: 1.4rem;
 }
+
+nav a{
+    /* color:white; */
+    color:rgb(0, 92, 121);
+   /* color:rgb(88, 88, 88); */
+    text-decoration: none;
+}
+
+nav a:hover{
+     color:white;
+    /* color:rgb(0, 92, 121); */
+     text-decoration: none;
+ }
 
 header{
     width: 100%;
     background-image: url("assets/5.jpg");
     background-size: 100% auto;
-    min-height: 60vh;
+    min-height: 80vh;
     background-position-y: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -36,17 +96,27 @@ header{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 2rem 4rem;
     
 }
 
+#main-title{
+    display:flex;
+    /* background-color: rgb(0, 135, 177); */
+    background-color: rgb(240, 240, 240);
+    padding: 2rem;
+}
+
+
 
 h1{
-    font-size: 5rem;
-    color: white;
-    text-align: center;
+    font-size: 4rem;
     max-width: 70%;
+    line-height: 1.2;
+    color: rgb(0, 135, 177);
+    /* 
+    font-style: italic; */
 }
 
 #estadisticas{
@@ -55,11 +125,49 @@ h1{
     gap:1rem;
 }
 
+#estadisticas>div{
+    
+    border: 5px rgb(0, 135, 177) solid;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 150px;
+     height: 150px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+}
+
+#estadisticas span{
+    font-size: 2.5rem;
+    color:rgb(0, 135, 177);
+    font-weight: 600;
+    line-height: 1;
+}
+
 #estadisticas p{
-    font-size: 3rem;
-    border: 2px white solid;
-    border-radius: 1500px;
+    font-size: 1rem;
+    color:gray;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.triparrafo{
+    display: flex;
+    justify-content: center;
     padding: 3rem;
+    gap:2rem;
+    background-color: rgb(240, 240, 240);
+}
+
+.triparrafo>div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    text-align: justify;
 }
 
 
@@ -71,13 +179,28 @@ h1{
     padding: 3rem;
 
 }
+.section-title{
+    padding: 2rem;
+    background-color: rgb(240, 240, 240);
+}
+
+
+.section-title span{
+    background-color: rgb(240, 240, 240);
+    color:rgb(0, 135, 177);
+}
+
+.section-title h2{
+    font-size: 2rem;
+}
 
 .parrafo-centrado h2{
     text-align: center;
+    color:rgb(0, 135, 177);
 }
 
 .parrafo-centrado p{
-    text-align: center;
+    text-align: justify;
 }
 
 #servicios{
@@ -136,7 +259,6 @@ h1{
 
 #obras{
     width: 100%;
-    background-color: lightgray;
     padding-bottom: 2rem;
 }
 
@@ -201,17 +323,23 @@ h1{
     background-image: url(assets/mapa.png);
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    align-items: flex-end;
     background-size: cover;
     background-position: center center;
     height: 70vh;
     /* background-attachment: fixed; */
+    color: white;
 }
 
 #contacto>div{
-    background-color: rgb(34, 147, 253);
+    background-color: rgb(0, 135, 177);
     width: 50%;
     padding: 2rem 2rem;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 footer{
