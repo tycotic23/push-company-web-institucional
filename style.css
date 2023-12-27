@@ -267,6 +267,7 @@ header{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: repeat(auto-fit,minmax(600px, 1fr));
     width: 100%;
+    
 }
 
 .servicio-texto{
@@ -295,6 +296,7 @@ header{
     background-position: center center;
     background-position-y: center;
     background-repeat: no-repeat;
+    transition:all .5s ease-in-out;
 
     /* filtro */
     /* filter: grayscale(); */
@@ -302,12 +304,10 @@ header{
     /* agregarle efecto de movimiento */
 }
 
-.item-servicio:hover{
+.item-servicio-achicado{
     filter:none;
     height: 400px;
     min-height: 400px;
-    /* grid-column-start:span 4; */
-    /* min-width: 100%; */
 }
 
 .item-servicio h3:hover{
