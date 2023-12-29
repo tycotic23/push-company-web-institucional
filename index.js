@@ -7,13 +7,13 @@ let itemsPServicios=document.querySelectorAll(".item-servicio p");
 
 
 /* eventos de mouse en general del elemento padre */
-containerServicios.addEventListener('mouseover',()=>{
+/* containerServicios.addEventListener('mouseover',()=>{
     itemsServicios.forEach(item=>item.classList.add("item-servicio-achicado"));
 });
 
 containerServicios.addEventListener('mouseout',()=>{
     itemsServicios.forEach(item=>item.classList.remove("item-servicio-achicado"));
-});
+}); */
 
 
 /* eventos de mouse individuales para cada servicio */
