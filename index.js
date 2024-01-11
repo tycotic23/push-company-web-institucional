@@ -3,7 +3,7 @@
 /* obtener elementos */
 let containerServicios=document.querySelector(".grid-servicios");
 let itemsServicios=document.querySelectorAll(".item-servicio");
-let itemsPServicios=document.querySelectorAll(".item-servicio p");
+let itemsPServicios=document.querySelectorAll(".item-servicio-contenido div");
 
 
 /* eventos de mouse en general del elemento padre */

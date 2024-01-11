@@ -9,6 +9,10 @@
     /* outline: solid red 2px; */
 }
 
+/* img{
+    max-width: 100%;
+} */
+
 :root{
     --main-color:#006b8a;
     --main-color-light-variant:#008cd0;
@@ -35,10 +39,11 @@ h1{
     text-align: left;
 }
 
-h1 span{
+h1 strong{
     font-weight: 900;
     text-transform: uppercase;
 }
+
 
 h2{
     color:var(--main-color-light-variant);
@@ -136,7 +141,7 @@ header{
     
     background-position-y: 30%;
     background-repeat: no-repeat;
-
+    background-size: cover;
     
     
 }
@@ -180,9 +185,10 @@ header{
 
 /* seccion de estadisticas */
 .section-estadisticas{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(auto-fit,minmax(100px, 1fr));
+    justify-content: center;
     width: 100%;
 }
 
@@ -191,7 +197,7 @@ header{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .section-estadisticas span{
@@ -200,6 +206,8 @@ header{
     line-height: 1;
     color:white;
 }
+
+
 
 .section-estadisticas p{
     font-size: 2.3rem;
@@ -232,13 +240,23 @@ header{
     align-items: center;
 }
 
-#nav-contactos li{
+#nav-contactos a{
     display:flex;
     gap:0.2rem;
     align-items: center;
+    color:white;
+    text-decoration: none;
+    
 }
 
-#footer-contactos li{
+#nav-contactos a:hover{
+   filter: brightness(1.3);
+    
+}
+
+
+
+#footer-contactos a{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -257,12 +275,12 @@ header{
 }
 
 .icon-hover{
-    transition:all .5s ease-in-out;
+    transition:all .3s ease-out;
 }
 
 .icon-hover:hover{
     transform: scale(1.5);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .title-section{
@@ -292,7 +310,7 @@ header{
 .grid-servicios{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
     width: 100%;
 }
 
@@ -342,14 +360,14 @@ header{
     align-items: center;
     flex-direction: column;
 }
-.item-servicio p{
+.item-servicio-contenido div{
     color:var(--main-dark-bg-color);
     font-size: 1rem;
     background-color: var(--main-bg-color);
     width: 100%;
     padding: 2rem;
     min-height: 40%;
-    transition:all .5s ease-in-out;
+    transition:all .4s ease-in-out;
     opacity: 0;
     height: 0;
 }
@@ -378,6 +396,13 @@ header{
     background-image: url(assets/2.jpg);
 }
 
+#servicio5{
+    background-image: url(assets/2.jpg);
+}
+
+#servicio6{
+    background-image: url(assets/2.jpg);
+}
 /* obras y proyectos */
 
 .proyectos{
@@ -395,11 +420,12 @@ header{
     grid-template-columns: 2fr 1fr;
     width: 100%;
     max-width: 1200px;
+    max-height: 70vh;
+    overflow: hidden;
 }
 
 .proyecto>img{
     object-fit: cover;
-    max-height: 70vh;
     width: 100%;
     /* clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 50% 100%, 40% 90%, 0 90%); */
 }
@@ -553,6 +579,11 @@ nav a:hover{
     width: 100%;
 }
 
+iframe{
+    width: 100%;
+    height: 60vh;
+}
+
 
 footer{
     width: 100%;
@@ -584,3 +615,256 @@ footer{
 }
 
 
+@media (max-width: 1200px) {
+
+    .title-section{
+        margin-bottom: -5%;
+    }
+    #title img{
+        max-width: 220px;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .section-estadisticas span{
+        font-size: 3rem;
+    }
+    
+    
+    
+    .section-estadisticas p{
+        font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 950px) {
+
+    .title-section{
+        margin-bottom: -7%;
+    }
+    #title img{
+        max-width: 150px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .header-content{
+        min-height: 60vh;
+    }
+
+    nav>div{
+        flex-direction: column;
+    }
+
+    nav img{
+        max-width: 70px;
+    }
+
+    .proyectos{
+        padding: 6rem 3rem;
+    }
+
+  }
+
+  @media (max-width: 850px) {
+    .section-estadisticas{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .triparrafo{
+        flex-direction: column;
+    }
+
+    .triparrafo>div{
+        align-items: flex-start;
+    }
+
+    .item-servicio h3{
+        font-size: 2rem;
+    }
+
+    
+
+    .proyecto{
+        grid-template-columns: 1fr;
+        max-height: none;
+    }
+
+    .proyecto>img{
+        max-height: 70vh;
+    }
+
+  }
+
+  @media (max-width: 720px) {
+
+    .item-servicio h3{
+        font-size: 1.6rem;
+    }
+    .title-section{
+        margin-bottom: -10%;
+    }
+    .menu{
+        font-size: 1rem;
+    }
+
+    .texto-columnas{
+        font-size: 1rem;
+        padding: 3rem 1rem;
+        gap:2rem;
+    }
+
+    .texto-columnas-centradas {
+        gap: 2rem;
+        font-size: 0.8rem;
+    }
+
+    #footer-contactos{
+        font-size: 1rem;
+    }
+
+    .title-section{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 60% 80%, 50% 100%, 40% 80%, 0 80%);
+    }
+
+  }
+
+  @media (max-width: 570px) {
+
+    
+
+    #title img{
+        max-width: 100px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    nav img{
+        max-width: 50px;
+    }
+
+    .section-estadisticas span{
+        font-size: 2rem;
+    }
+    
+    
+    
+    .section-estadisticas p{
+        font-size: 1rem;
+    }
+
+    /* cambiar menu por menu hamburguesa */
+    .menu{
+        display: none;
+    }
+
+    .estadisticas-container{
+        padding: 2rem 4rem;
+    }
+
+    .texto-columnas-centradas {
+        gap: 2rem;
+        font-size: 1rem;
+        flex-direction: column;
+    }
+
+    #footer-contactos{
+        flex-direction: column;
+        align-items: center;
+        gap:1rem;
+    }
+
+    #footer-logo>img{
+        width: 50%;
+    }
+
+    #desarrollado{
+        font-size: 0.8rem;
+    }
+
+
+    .grid-servicios {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(auto-fit,1fr);
+    }
+
+    h2.light-title{
+        font-size: 3rem;
+    }
+
+    .proyectos{
+        padding: 4rem 2rem;
+        gap:2rem;
+    }
+
+  }
+
+  @media (max-width: 460px){
+    #desarrollado{
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-contactos a{
+        font-size: 0.8rem;
+    }
+
+    .title-section{
+        margin-bottom: -15%;
+        padding: 1rem 2rem;
+        padding-bottom: 3rem;
+        min-height: auto;
+    }
+
+    h2.light-title{
+        font-size: 2rem;
+    }
+
+    .proyecto-info h3 {
+        font-size: 1.3rem;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    #title img{
+        max-width: 150px;
+    }
+
+    #title{
+        flex-direction: column;
+        
+    }
+  }
+
+  @media (max-width: 400px){
+
+   
+    #nav-contactos ul span{
+        display: none;
+    }
+  }
+
+  /* @media (max-width: 350px){
+
+    
+  } */
+
+  @media (max-width: 300px){
+
+    .title-section{
+        margin-bottom: -20%;
+    }
+
+    h2.light-title{
+        font-size: 1.5rem;
+    }
+  }
