@@ -50,11 +50,36 @@ menu.addEventListener('click',()=>{
 
 /* animacion de numeros */
 const contadores=document.querySelectorAll(".contador")
-const velocidad=20;
+const dataContadores=[
+    {
+        total:40,
+        velocidad:30,
+        salto:1,
+        valor:0
+    },
+    {
+        total:437,
+        velocidad:15,
+        salto:5,
+        valor:0
+    },
+    {
+        total:20000,
+        velocidad:3,
+        salto:75,
+        valor:0
+    },
+    {
+        total:80000,
+        velocidad:2,
+        salto:140,
+        valor:0
+    }
+];/* 
 const totalesContadores=[40,437,20000,80000];
 const velocidadContadores=[30,8,2,2];
 const saltoContadores=[1,5,100,200];
-let cantidadesContadores=[0,0,0,0];
+let cantidadesContadores=[0,0,0,0]; */
 let contando=[];
 
 /* propiamente la animacion del cambio de los numeros */
@@ -62,13 +87,13 @@ const animarContadores=()=>{
     contadores.forEach((contador,index)=>{
         contando.push(
             setInterval(()=>{
-                cantidadesContadores[index]+=saltoContadores[index];
-                contadores[index].textContent=cantidadesContadores[index];
-                if(cantidadesContadores[index]>=totalesContadores[index]){
+                dataContadores[index].valor+=dataContadores[index].salto;
+                contadores[index].textContent=dataContadores[index].valor;
+                if(dataContadores[index].valor>=dataContadores[index].total){
                     clearInterval(contando[index]);
-                    contadores[index].textContent=totalesContadores[index];
+                    contadores[index].textContent=dataContadores[index].total;
                 }
-            },velocidadContadores[index])
+            },dataContadores[index].velocidad)
         );
     });
 };
