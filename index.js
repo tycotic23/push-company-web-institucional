@@ -6,30 +6,49 @@ let itemsServicios=document.querySelectorAll(".item-servicio");
 let itemsPServicios=document.querySelectorAll(".item-servicio-contenido div");
 
 
-/* eventos de mouse en general del elemento padre */
-/* containerServicios.addEventListener('mouseover',()=>{
-    itemsServicios.forEach(item=>item.classList.add("item-servicio-achicado"));
-});
 
-containerServicios.addEventListener('mouseout',()=>{
-    itemsServicios.forEach(item=>item.classList.remove("item-servicio-achicado"));
-}); */
 
 
 /* eventos de mouse individuales para cada servicio */
-/* Notar que es importante respetar la estructura de que cada uno debe tener un elemento <p> dentro */
-itemsServicios.forEach(
-    (item,index)=>{
+/* Notar que es importante respetar la estructura de que cada uno debe tener un elemento <div> dentro */
+itemsServicios.forEach((item,index)=>{
         item.addEventListener('mouseout',()=>{
             itemsPServicios[index].style.opacity='0';
             itemsPServicios[index].style.minHeight='40%';
             itemsPServicios[index].style.height='0';
         });
+
         item.addEventListener('mouseover',()=>{
             itemsPServicios[index].style.opacity='1';
 
             itemsPServicios[index].style.minHeight='60%';
             itemsPServicios[index].style.height='auto';
         });
-    });
+});
 
+
+
+
+/* eventos del icono del menu hamburguesa */
+let menuIcon=document.querySelector(".menu-icon");
+let menu=document.querySelector(".menu");
+
+
+menuIcon.addEventListener('click',()=>{
+    menu.classList.toggle("toggle-menu");
+    menu.classList.toggle("ocultar");
+});
+
+
+menu.addEventListener('click',()=>{
+        menu.classList.remove("toggle-menu");
+        menu.classList.add("ocultar");
+});
+
+/* cambiar menu con el scroll */
+
+let nav=document.querySelector("nav");
+
+window.addEventListener('scroll',()=>{
+    nav.classList.toggle("nav-fixed",window.scrollY>50);
+});
