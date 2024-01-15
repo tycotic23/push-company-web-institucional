@@ -75,11 +75,7 @@ const dataContadores=[
         salto:140,
         valor:0
     }
-];/* 
-const totalesContadores=[40,437,20000,80000];
-const velocidadContadores=[30,8,2,2];
-const saltoContadores=[1,5,100,200];
-let cantidadesContadores=[0,0,0,0]; */
+];
 let contando=[];
 
 /* propiamente la animacion del cambio de los numeros */
