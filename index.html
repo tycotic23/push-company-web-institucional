@@ -9,6 +9,8 @@
     <noscript>
         <link rel="stylesheet" href="style.css">
     </noscript>
+    <!-- precarga de la imagen de fondo -->
+    <link rel="preload" fetchpriority="high" as="image" href="assets/PHOTO-2023-12-21-09-30-51.jpg" type="image/jpg">
     <link media="all" rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <meta
         name="description"
@@ -54,7 +56,7 @@
         
     </header>
     <main>
-        <div class="triparrafo">
+        <div class="triparrafo anim">
             <div>
                 <h3>Amplia trayectoria</h3>
                 <p>Llevamos 13 años concretando todos los proyectos que nuestros clientes necesitan. Tomamos cada desafío como si fuera el más importante. </p>
@@ -72,25 +74,25 @@
         <div class="bg-filter-section estadisticas-container">
             <div class="section-estadisticas">
                 <div>
-                    <p><span>40</span></p>
+                    <p ><span class="contador">0</span></p>
                     <p>años</p>
                 </div>
                 <div>
-                    <p><span>437</span></p>
+                    <p><span class="contador" data-cantidad-total="437">0</span></p>
                     <p>proyectos</p>
                     <p>efectuados</p>
                 </div>
                 <div>
-                    <p><span>20.000</span></p>
+                    <p><span class="contador" data-cantidad-total="20000">0</span></p>
                     <p>m² cubiertos</p>
                 </div>
                 <div>
-                    <p><span>80.000</span></p>
+                    <p><span class="contador" data-cantidad-total="80000">0</span></p>
                     <p>m² cubiertos</p>
                 </div>
             </div>
         </div>
-        <div class="section-flex-centrada-column">
+        <div class="section-flex-centrada-column anim">
             <div class="parrafo-centrado" id="nosotros">
                 <h2>¿Quiénes somos?</h2>
                 <p>PUSH COMPANY S.A. y GOMEZ VIAL CONSTRUCCIONES son empresas argentinas dedicadas a brindar soluciones en lo que a grandes obras repecta.
@@ -191,7 +193,7 @@
                 </div>
             </div>
         </div>
-        <div class="texto-columnas">
+        <div class="texto-columnas anim">
             <p>
                 <span>Nos especializamos en grandes obras.
                     Trabajamos en el compromiso y la
@@ -212,7 +214,7 @@
             <div class="proyectos recorte">
 
                 <div class="proyecto">
-                    <img loading="lazy" src="assets/PHOTO-2023-12-21-09-46-58.jpg" alt="proyecto-x">
+                    <img loading="lazy" src="assets/12.jpg" alt="proyecto-x">
                     <div class="proyecto-info">
                         <h3>Proyecto x</h3>
                         <p>Toda la explicacion del proyecto, incluso se puede agregar algunas imagenes o videos o botones o links</p>
@@ -238,7 +240,7 @@
                 </div>
 
                 <div class="proyecto">
-                    <img loading="lazy" src="assets/PHOTO-2023-12-21-09-46-58.jpg" alt="proyecto-x">
+                    <img loading="lazy" src="assets/12.jpg" alt="proyecto-x">
                     <div class="proyecto-info">
                         <h3>Proyecto x</h3>
                         <p>Toda la explicacion del proyecto, incluso se puede agregar algunas imagenes o videos o botones o links</p>
@@ -252,7 +254,7 @@
 
             </div>
         </div>
-        <div class="texto-columnas">
+        <div class="texto-columnas anim">
             <p>
                 <span>Totalmente comprometidos con nuestros
                     clientes.</span>
@@ -264,11 +266,11 @@
         </div>
 
         <!-- contactos y mapa -->
-        <div class="map" id="contacto">
+        <div class="map anim" id="contacto">
             <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.6185887984975!2d-61.59879422518053!3d-34.028000027320694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c7eed7e28cf66f%3A0x95ba2d97deef7bff!2sPUSH%20COMPANY%20SA!5e0!3m2!1ses-419!2sar!4v1704909673192!5m2!1ses-419!2sar"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             
         </div>
-        <div class="texto-columnas-centradas">
+        <div class="texto-columnas-centradas anim">
             <div>
                 <img loading="lazy" class="icon-big" src="assets/telefono-icon.svg" alt="telefono">
                 <p>(03462) 450859</p>

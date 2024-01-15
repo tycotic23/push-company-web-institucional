@@ -1,6 +1,19 @@
 
+h1 strong{
+    font-weight: 900;
+    text-transform: uppercase;
+}
 
+nav{
+    background-color: var(--main-color-filter);
+   transition: all 0.4s ease-in-out;
+}
 
+nav a{
+
+    color:var(--nav-color-text);
+    text-decoration: none;
+}
 
 /* estructuras */
 
@@ -185,6 +198,7 @@ header{
     grid-template-rows: repeat(auto-fit,minmax(100px, 1fr));
     justify-content: center;
     width: 100%;
+    opacity: 0;
 }
 
 .section-estadisticas>div{
@@ -403,6 +417,7 @@ header{
     display: flex;
     flex-direction: column;
     width: 100%;
+    color: black;
 }
 
 .proyecto-info ul{
@@ -588,6 +603,37 @@ footer{
 #info-empresa img{
     width: 200px;
 }
+
+
+
+
+
+
+
+/* animaciones */
+@keyframes aparecer{
+
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.anim{
+    opacity: 0;
+}
+
+.in-anim{
+    animation: aparecer 1.3s;
+    opacity: 1;
+}
+
+
 
 
 @media (max-width: 1200px) {

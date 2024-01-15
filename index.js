@@ -45,10 +45,86 @@ menu.addEventListener('click',()=>{
         menu.classList.add("ocultar");
 });
 
-/* cambiar menu con el scroll */
+
+
+
+/* animacion de numeros */
+const contadores=document.querySelectorAll(".contador")
+const velocidad=20;
+const totalesContadores=[40,437,20000,80000];
+const velocidadContadores=[30,8,2,2];
+const saltoContadores=[1,5,100,200];
+let cantidadesContadores=[0,0,0,0];
+let contando=[];
+
+/* propiamente la animacion del cambio de los numeros */
+const animarContadores=()=>{
+    contadores.forEach((contador,index)=>{
+        contando.push(
+            setInterval(()=>{
+                cantidadesContadores[index]+=saltoContadores[index];
+                contadores[index].textContent=cantidadesContadores[index];
+                if(cantidadesContadores[index]>=totalesContadores[index]){
+                    clearInterval(contando[index]);
+                    contadores[index].textContent=totalesContadores[index];
+                }
+            },velocidadContadores[index])
+        );
+    });
+};
+
+/* funcion que anima los contadores y los hace aparecer */
+
+const mostrarContadores= elementos=>{
+    elementos.forEach(elemento=>{
+        if(elemento.isIntersecting){
+            elemento.target.classList.add("in-anim");
+            setTimeout(animarContadores,400);
+        }
+    });
+};
+
+/* observer para los numeros */
+const observer = new IntersectionObserver(mostrarContadores,{
+    threshold:0.75
+});
+
+/* asignar observer a los numeros */
+const divContadores=document.querySelector(".section-estadisticas");
+observer.observe(divContadores);
+
+
+
+/* cambiar menu con el scroll y demas animaciones de scroll*/
 
 let nav=document.querySelector("nav");
+let animados=document.querySelectorAll(".anim");
+let auxiliarTop=0;
 
 window.addEventListener('scroll',()=>{
+    /* menu */
     nav.classList.toggle("nav-fixed",window.scrollY>50);
+
+});
+
+
+/* animaciones de scroll que aparecen */
+
+
+const mostrarElementos= elementos=>{
+    elementos.forEach(elemento=>{
+        if(elemento.isIntersecting){
+            elemento.target.classList.add("in-anim");
+        }
+    });
+};
+
+const observerIn = new IntersectionObserver(mostrarElementos,{
+    threshold:0.75
+});
+
+
+const animElementos=document.querySelectorAll(".anim");
+animElementos.forEach((elemento)=>{
+    observer.observe(elemento);
 });
