@@ -63,6 +63,9 @@ p span{
     cursor: pointer;
 }
 
+.left{
+    text-align: left;
+}
 
 
 
@@ -403,10 +406,10 @@ main{
 
 
 #servicio1{
-    background-image: url(assets/4.jpg);
+    background-image: url(assets/portada-obras-civiles.jfif);
 }
 #servicio2{
-    background-image: url(assets/7.jpg);
+    background-image: url(assets/portada-obras-ferroviarias.jfif);
 }
 #servicio3{
     background-image: url(assets/1.jpg);
@@ -416,11 +419,12 @@ main{
 }
 
 #servicio5{
-    background-image: url(assets/2.jpg);
+    background-image: url(assets/portada-servicio.jfif);
+    background-position: bottom;
 }
 
 #servicio6{
-    background-image: url(assets/2.jpg);
+    background-image: url(assets/portada-oficina-tecnica.jpg);
 }
 /* obras y proyectos */
 
@@ -439,13 +443,13 @@ main{
     grid-template-columns: 2fr 1fr;
     width: 100%;
     max-width: 1200px;
-    max-height: 70vh;
     overflow: hidden;
 }
 
 .proyecto>img{
     object-fit: cover;
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .proyecto-info{
