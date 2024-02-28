@@ -23,8 +23,8 @@ menu.addEventListener('click',()=>{
 const contadores=document.querySelectorAll(".contador")
 const dataContadores=[
     {
-        total:40,
-        velocidad:30,
+        total:13,
+        velocidad:60,
         salto:1,
         valor:0
     },

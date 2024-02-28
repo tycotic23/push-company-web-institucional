@@ -19,7 +19,9 @@ nav a{
 
 
 
-
+#nosotros{
+    scroll-margin-top: 13rem;
+}
 
 /* componentes */
 
@@ -88,7 +90,9 @@ h3{
 .parrafo-centrado{
     width: 100%;
     padding: 3rem;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .triparrafo{
@@ -98,14 +102,21 @@ h3{
     gap:2rem;
 }
 
+.large-text{
+    max-width: 1000px;
+    text-align: left;
+    font-size: 1.3rem;
+}
 .triparrafo>div{
     display: flex;
     flex-direction: column;
     width: 100%;
     flex-grow: 1;
-    text-align: justify;
+    text-align: center;
     align-items: center;
 }
+
+
 
 .texto-columnas{
     display: flex;
@@ -167,6 +178,7 @@ header{
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
+    
 }
 
 .bg-filter-section{
@@ -292,6 +304,7 @@ main{
 .icon-hover:hover{
     transform: scale(1.5);
 }
+
 
 .title-section{
     padding: 3rem 2rem;
@@ -458,6 +471,8 @@ main{
     flex-direction: column;
     width: 100%;
     color: black;
+    justify-content: flex-start;
+    gap:0;
 }
 
 
@@ -465,7 +480,7 @@ main{
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap:1.5rem;
+    gap:0.5rem;
     padding-top: 2rem;
 }
 
@@ -480,9 +495,7 @@ main{
 }
 
 
-.proyecto-info h3{
-    font-size: 2rem;
-}
+
 
 
 
@@ -583,9 +596,7 @@ nav a:hover{
 
 
 
-.parrafo-centrado p{
-    text-align: justify;
-}
+
 
 
 
@@ -598,6 +609,31 @@ nav a:hover{
     background-position-y: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.banner-flota{
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    height: 40vh;
+    background-position-y: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-flota{
+    background-image: linear-gradient(var(--main-color-filter),var(--main-color-filter)), url(assets/banner-flota.jfif);
+   
+}
+
+.banner-white-title{
+    color:white;
+    text-align: center;
+    font-size: 3rem;
+
 }
 
 #banner-obras{
@@ -742,6 +778,7 @@ footer{
 
     .triparrafo>div{
         align-items: flex-start;
+        text-align: left;
     }
 
     .item-servicio h3{
@@ -899,7 +936,11 @@ footer{
 
     .parrafo-centrado{
         padding: 1rem;
-    
+        
+    }
+
+    .large-text{
+        font-size: 1rem;
     }
 
     #desarrollado{
@@ -941,9 +982,29 @@ footer{
     }
   }
 
-  @media (max-width: 400px){
+  @media (max-width: 750px){
+    .banner-white-title {
+        font-size: 2.5rem;
+    }
+  }
 
-   
+  @media (max-width: 600px){
+    .banner-white-title {
+        font-size: 2rem;
+    }
+
+    .banner-flota {
+        height: 200px;
+    }
+  }
+
+  @media (max-width: 450px){
+    .banner-white-title {
+        font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 400px){
     .estadisticas-container{
         padding: 1rem;
     }
@@ -968,10 +1029,16 @@ footer{
 
   }
 
-  /* @media (max-width: 350px){
+  @media (max-width: 350px){
+.banner-white-title {
+        font-size: 1rem;
+    }
 
+    .proyecto-info h3 {
+        font-size: 1rem;
+    }
     
-  } */
+  }
 
   @media (max-width: 300px){
 
@@ -991,7 +1058,19 @@ footer{
 
   @media (max-width: 240px){
 
-    p{
-        font-size: 0.7rem;
+    p,.proyecto-info ul {
+        font-size: 0.6rem;
+    }
+
+    .proyecto-info h3 {
+        font-size: 0.8rem;
+    }
+
+    .banner-white-title {
+        font-size: 0.8rem;
+    }
+
+    .banner-flota {
+        height: 100px;
     }
   }
