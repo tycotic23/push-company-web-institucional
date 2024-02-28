@@ -104,7 +104,7 @@ h3{
 
 .large-text{
     max-width: 1000px;
-    text-align: left;
+    text-align: center;
     font-size: 1.3rem;
 }
 .triparrafo>div{
@@ -307,7 +307,7 @@ main{
 
 
 .title-section{
-    padding: 3rem 2rem;
+    padding: 3rem 80px;
     min-height: 40vh;
     display:flex;
     align-items: flex-end;
@@ -955,8 +955,7 @@ footer{
     }
 
     .title-section{
-        padding: 1rem 2rem;
-        padding-bottom: 3rem;
+        padding: 2rem 40px;
         min-height: auto;
     }
 
