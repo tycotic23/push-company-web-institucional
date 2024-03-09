@@ -419,7 +419,7 @@ main{
 
 
 #servicio1{
-    background-image: url(assets/portada-obras-civiles.jfif);
+    background-image: url(assets/obras-civiles.jpg);
 }
 #servicio2{
     background-image: url(assets/portada-obras-ferroviarias.jfif);
@@ -432,7 +432,7 @@ main{
 }
 
 #servicio5{
-    background-image: url(assets/portada-servicio.jfif);
+    background-image: url(assets/servicio.jpg);
     background-position: bottom;
 }
 
@@ -636,10 +636,10 @@ nav a:hover{
 
 }
 
-#banner-obras{
+/* #banner-obras{
     background-image: linear-gradient(var(--main-color-filter),var(--main-color-filter)), url(assets/8.jpg);
     
-}
+} */
 
 #contacto{
     width: 100%;
