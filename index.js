@@ -99,6 +99,11 @@ btnBannerRight.addEventListener('click',()=>{
     CarouselToRight();
 });
 
+/* temporizador del banner */
+/* clearInterval(); */
+setInterval(()=>{
+    CarouselToRight();
+  },5000);
 
 /* animacion de numeros */
 const contadores=document.querySelectorAll(".contador")
