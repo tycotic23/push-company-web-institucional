@@ -16,7 +16,88 @@ menu.addEventListener('click',()=>{
         menu.classList.add("ocultar");
 });
 
+/* animacion banner */
 
+let banner=document.getElementById("banner");
+let childbanner;
+
+ function CarouselMoveLeft(){
+    /* animacion mover a la izquierda y quitar el primer elemento para llevarlo al final */
+    childbanner=banner.firstElementChild;
+
+    childbanner.classList.add("anim-fade-out");
+
+   setTimeout(()=>{
+        banner.firstElementChild.classList.remove("anim-fade-out");
+        childbanner.classList.remove("anim-fade-in");
+        banner.removeChild(childbanner);
+        banner.appendChild(childbanner);
+        banner.firstElementChild.classList.add("anim-fade-in");
+      },500); //debe coincidir con la transicion o mas
+    
+      setTimeout(()=>{
+        banner.firstElementChild.classList.remove("anim-fade-out");
+        childbanner.classList.remove("anim-fade-in");
+        canMove=true;
+      },1000); //debe coincidir con la transicion o mas
+    
+  }
+
+  function CarouselMoveRight(){
+    childbanner=banner.lastElementChild;
+    banner.firstElementChild.classList.add("anim-fade-out");
+    
+
+    setTimeout(()=>{
+        banner.removeChild(childbanner);
+        banner.insertBefore(childbanner,banner.firstElementChild);
+        childbanner.classList.add("anim-fade-in");
+        banner.firstElementChild.classList.remove("anim-fade-out");
+      },500); //debe coincidir con la transicion o mas
+
+      setTimeout(()=>{
+        banner.firstElementChild.classList.remove("anim-fade-out");
+        childbanner.classList.remove("anim-fade-in");
+        canMove=true;
+      },1000); //debe coincidir con la transicion o mas
+    
+
+    
+    
+    
+  }
+
+  let canMove=true;
+
+  function CarouselToRight(){
+    if(canMove){
+      canMove=false;
+        /* mover */
+        CarouselMoveRight();
+    }
+    
+  }
+
+  function CarouselToLeft(){
+    if(canMove){
+      canMove=false;
+       /* mover */
+      CarouselMoveLeft();
+      
+    }
+  }
+
+  /* asignar funciones a los botones del banner */
+  let btnBannerRight=document.querySelector(".infinite-carousel__right");
+  let btnBannerLeft=document.querySelector(".infinite-carousel__left");
+
+  btnBannerLeft.addEventListener('click',()=>{
+    CarouselToLeft();
+});
+
+btnBannerRight.addEventListener('click',()=>{
+    CarouselToRight();
+});
 
 
 /* animacion de numeros */

@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="style.css">
     </noscript>
     <!-- precarga de la imagen de fondo -->
-    <link rel="preload" fetchpriority="high" as="image" href="assets/PHOTO-2023-12-21-09-30-51.jpg" type="image/jpg">
+    <link rel="preload" fetchpriority="high" as="image" href="assets/Banner-1.webp" type="image/jpg">
     <link media="all" rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <meta
         name="description"
@@ -22,37 +22,62 @@
     
     <header id="principal">
 
-        <div class="bloque--horizontal-end bk-brighless-foto">
-            <div>
-                <ul class="lista-columna contactos-top">
-                    <li><a class="lista__link" href="https://wa.me/5493462501365"><img loading="lazy" class="icon-little icon-hover" src="assets/wsp-icon.svg" alt="whatsapp"><span>+54 9 3462 501365</span></a></li>
-                    <li><a class="lista__link" href="mailto:pushcompanysa@gmail.com"><img loading="lazy" class="icon-little icon-hover" src="assets/email-icon.svg" alt="email"><span>pushcompanysa@gmail.com</span></a></li>
-                    <li><a class="lista__link" href="https://www.facebook.com/Pushcompanysa"><img loading="lazy" class="icon-little icon-hover" src="assets/fb-icon.svg" alt="facebook"></a></li>
-                    <li><a class="lista__link" href="https://www.instagram.com/pushcompanysa/"><img loading="lazy" class="icon-little icon-hover" src="assets/ig-icon.svg" alt="instagram"></a></li>
-                </ul>
+        
+        
+        <!-- contenido de la pagina -->
+
+        <div class="banner--header ">
+            <div class="banner--header__imgs" id="banner">
+                <img class="banner--header__img" src="assets/Banner-1.webp" alt="">
+                <img class="banner--header__img" src="assets/Banner-2.webp" alt="">
+                <img class="banner--header__img" src="assets/Banner-3.webp" alt="">
             </div>
-        </div>
-        <nav>
-            <div>
-                <img loading="lazy" class="nav-logo" src="assets/logo-blanco.png" alt="logo-push-company">
-                <div>
-                    <ul class="menu ocultar">
-                        <li><a href="#principal">| Principal</a></li>
-                        <li><a href="#nosotros">| Nosotros</a></li>
-                        <li><a href="#servicios">| Servicios</a></li>
-                        <li><a href="#obras">| Obras</a></li>
-                        <li><a href="#contacto">| Contacto</a></li>
-                    </ul>
-                    <img loading="lazy" class="icon-medium menu-icon" src="assets/menu-navigation.svg" alt="desplegar menu de navegación">
+            
+            <div class="banner__content">
+                <div id="title">
+                    <img src="assets/logo-gris-blanco.png" alt="logo-push-company">
+                    <h1><strong>Amplia Experiencia</strong><br>en grandes obras</h1>
                 </div>
-                
             </div>
-        </nav>
-        <div class="header-content">
-            <div id="title">
-                <img src="assets/logo-gris-blanco.png" alt="logo-push-company">
-                <h1><strong>Amplia Experiencia</strong><br>en grandes obras</h1>
+             <!-- flecha derecha -->
+             <button class="infinite-carousel__button infinite-carousel__right" (click)="CarouselToLeft()">
+                <img src="assets/arrow-right.svg" alt="">
+            </button>
+            <!-- flecha izquierda -->
+            <button class="infinite-carousel__button infinite-carousel__left" (click)="CarouselToRight()">
+                <img src="assets/arrow-left.svg" alt="">
+            </button>
+        </div>
+
+        <!-- menu -->
+        <div class="transparent-menu">
+            <div class="bloque--horizontal-end bk-brighless-foto">
+                <div>
+                    <ul class="lista-columna contactos-top">
+                        <li><a class="lista__link" target="_blank" href="https://wa.me/5493462501365"><img loading="lazy" class="icon-little icon-hover" src="assets/wsp-icon.svg" alt="whatsapp"><span>+54 9 3462 501365</span></a></li>
+                        <li><a class="lista__link" target="_blank" href="mailto:pushcompanysa@gmail.com"><img loading="lazy" class="icon-little icon-hover" src="assets/email-icon.svg" alt="email"><span>pushcompanysa@gmail.com</span></a></li>
+                        <li><a class="lista__link" target="_blank" href="https://www.facebook.com/Pushcompanysa"><img loading="lazy" class="icon-little icon-hover" src="assets/fb-icon.svg" alt="facebook"></a></li>
+                        <li><a class="lista__link" target="_blank" href="https://www.instagram.com/pushcompanysa/"><img loading="lazy" class="icon-little icon-hover" src="assets/ig-icon.svg" alt="instagram"></a></li>
+                        <li><a class="lista__link" target="_blank" href="https://www.linkedin.com/company/pushcompanysa"><img loading="lazy" class="icon-little icon-hover" src="assets/linkedin.svg" alt="linkedin"></a></li>
+                    </ul>
+                </div>
             </div>
+            <nav>
+                <div>
+                    <img loading="lazy" class="nav-logo" src="assets/logo-blanco.png" alt="logo-push-company">
+                    <div>
+                        <ul class="menu ocultar">
+                            <li><a href="#principal">| Principal</a></li>
+                            <li><a href="#nosotros">| Nosotros</a></li>
+                            <li><a href="#servicios">| Servicios</a></li>
+                            <li><a href="#obras">| Obras</a></li>
+                            <li><a href="#contacto">| Contacto</a></li>
+                        </ul>
+                        <img loading="lazy" class="icon-medium menu-icon" src="assets/menu-navigation.svg" alt="desplegar menu de navegación">
+                    </div>
+                    
+                </div>
+            </nav>
         </div>
         
     </header>
@@ -301,15 +326,16 @@
             <div>
                 <ul class="lista-columna">
                     <li>Seguinos</li>
-                    <li><a href="https://www.facebook.com/Pushcompanysa"><img class="icon-medium icon-hover" src="assets/fb-icon.svg" alt="facebook"></a></li>
-                    <li><a href="https://www.instagram.com/pushcompanysa/"><img loading="lazy" class="icon-medium icon-hover" src="assets/ig-icon.svg" alt="instagram"></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/Pushcompanysa"><img loading="lazy" class="icon-medium icon-hover" src="assets/fb-icon.svg" alt="facebook"></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/pushcompanysa/"><img loading="lazy" class="icon-medium icon-hover" src="assets/ig-icon.svg" alt="instagram"></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/company/pushcompanysa"><img loading="lazy" class="icon-medium icon-hover" src="assets/linkedin.svg" alt="linkedin"></a></li>
                 </ul>
             </div>
         </div>
         <!-- creado por -->
         <div id="desarrollado">
             <p>© Copyright 2024 Push Company S.A.</p>
-            <p>Desarrollado por <a href="https://tomasstevan.com.ar/">Tomas Stevan</a></p>
+            <p>Desarrollado por <a target="_blank" href="https://tomasstevan.com.ar/">Tomas Stevan</a></p>
         </div>
     </footer>
     <script async defer src="index.js"></script>
