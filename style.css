@@ -31,12 +31,6 @@ nav a{
     
 }
 
-/* estilos de fondo */
-
-.bk-brighless-foto{
-    backdrop-filter: brightness(70%);
-    color:white;
-}
 
 /* estilos */
 
@@ -671,46 +665,15 @@ hr{
 
 
 
-/* esta clase se añade al menu cuando se lo abre desde el icono hamburguesa */
-.toggle-menu{
-    flex-direction: column;
-    position: fixed;
-    display: flex ;
-    width: 100%;
-    top:7rem;
-    left: 0;
-    align-items: center;
-    /* font-size: 2rem; */
-    padding: 0 1rem;
-    gap:0.2rem;
-    z-index: 20;
-}
 
-.toggle-menu li{
-    background-color: var(--main-bg-color);
-    width: 100%;
-    padding: 0 1rem;
-}
-
-.toggle-menu li:hover{
-    background-color: white;
-    width: 100%;
-    padding: 0 1rem;
-}
-
-.toggle-menu a{
-    display: block;
-    font-size: 1.5rem;
-    width: 100%;
-    color:black;
-}
 
 
 
 nav a:hover{
      /* color:white; */
-    color:black;
+    /* color:var(--main-color); */
      text-decoration: none;
+     
  }
 
 
@@ -720,10 +683,11 @@ nav a:hover{
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    gap:3rem;
+    gap:2rem;
 }
 #title img{
-    max-width: 300px;
+    max-width: 250px;
+    max-width: clamp(115px,20vw,250px);
 }
 
 
@@ -854,13 +818,11 @@ footer{
 @media (max-width: 1200px) {
 
     
-    #title img{
+    /* #title img{
         max-width: 220px;
-    }
+    } */
 
-    h1{
-        font-size: 3rem;
-    }
+  
 
     .section-estadisticas span{
         font-size: 3rem;
@@ -879,20 +841,18 @@ footer{
         width: 10%;
     }
     
-    #title img{
-        max-width: 150px;
-    }
-
-    h1{
-        font-size: 2rem;
-    }
 
     .banner--header__imgs{
         min-height: 60vh;
     }
 
+    nav{
+        padding: 1rem 2rem;
+    }
+
     nav>div{
         flex-direction: column;
+        
     }
 
     .nav-logo{
@@ -979,13 +939,6 @@ footer{
         max-height: 50vh;
     }
 
-    #title img{
-        max-width: 100px;
-    }
-
-    h1{
-        font-size: 1.5rem;
-    }
 
     .triparrafo{
         padding: 2rem;
@@ -1005,6 +958,40 @@ footer{
     }
 
     /* cambiar menu por menu hamburguesa */
+
+    /* esta clase se añade al menu cuando se lo abre desde el icono hamburguesa */
+.toggle-menu ul{
+    flex-direction: column;
+    display: flex ;
+    width: 100%;
+    left: 0;
+    align-items: center;
+    padding: 0;
+    gap:0;
+    z-index: 20;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color-light-variant);
+}
+
+.toggle-menu li{
+    border: 1px solid var(--main-color-light-variant);
+    
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.toggle-menu li:hover{
+    background-color: var(--main-color-filter);
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.toggle-menu a{
+    display: block;
+    font-size: 1.5rem;
+    width: 100%;
+    color:var(--main-bg-color);
+}
     .ocultar{
         display: none;
     }
@@ -1015,6 +1002,15 @@ footer{
 
     nav>div{
         flex-direction: row;
+    }
+
+    .menu ul{
+        position: absolute;
+        top: 100%;
+    }
+
+    nav{
+        padding: 1rem;
     }
 
     .estadisticas-container{
@@ -1125,9 +1121,10 @@ footer{
         text-align: center;
     }
 
-    #title img{
+  /*   #title img{
         max-width: 150px;
-    }
+       
+    } */
 
     #title{
         flex-direction: column;
@@ -1149,6 +1146,10 @@ footer{
     .banner-flota {
         height: 200px;
     }
+
+    .contactos-top span{
+        display: none;
+    }
   }
 
   @media (max-width: 450px){
@@ -1162,9 +1163,7 @@ footer{
         padding: 1rem;
     }
 
-    .contactos-top span{
-        display: none;
-    }
+   
 
     #footer-contactos p{
         font-size: 0.8rem;
