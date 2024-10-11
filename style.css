@@ -15,6 +15,10 @@ nav a{
     text-decoration: none;
 }
 
+.banner--header__imgs{
+    min-height: 80vh;
+}
+
 /* estructuras */
 
 
@@ -841,10 +845,6 @@ footer{
         width: 10%;
     }
     
-
-    .banner--header__imgs{
-        min-height: 60vh;
-    }
 
     nav{
         padding: 1rem 2rem;
