@@ -100,7 +100,6 @@ btnBannerRight.addEventListener('click',()=>{
 });
 
 /* temporizador del banner */
-/* clearInterval(); */
 setInterval(()=>{
     CarouselToRight();
   },5000);
