@@ -108,7 +108,7 @@ setInterval(()=>{
 const contadores=document.querySelectorAll(".contador")
 const dataContadores=[
     {
-        total:14,
+        total:17,
         velocidad:60,
         salto:1,
         valor:0
